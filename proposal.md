@@ -8,5 +8,5 @@ My project will be about exploring creativity, allowing the player to put their 
   - the fundamentals of a basic drawing game
 
 ## Nice to have a list
-  - other thing 1
-  - other thing 2
+  - an image reference that pops up, the player tries to draw the image
+  - black drawings, the player then has to fill each part with the right color
