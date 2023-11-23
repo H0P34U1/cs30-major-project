@@ -8,6 +8,8 @@ let button;
 let isDrawingEnabled;
 let isLiningEnabled;
 
+
+//pencil button
 function tools() {
   button = createButton("pencil");
   button.style("background-color", "gray");
@@ -17,6 +19,7 @@ function tools() {
   button.mousePressed(pencil);
 }
 
+//line button
 function equip() {
   button = createButton("line");
   button.style("background-color", "gray");
@@ -26,37 +29,41 @@ function equip() {
   button.mousePressed(lining);
 }
 
+//color pallete positions
 function colorCode() {
   noStroke();
   fill(200, 200, 200);
-  rect(0, 0, 20, height / 6);
+  rect(0, 0, 20, windowHeight);
   fill("black");
-  rect(0, 50, 20, height / 6);
+  rect(0, 50, 20, windowHeight);
   fill("red");
-  rect(0, 100, 20, height / 6);
+  rect(0, 100, 20, windowHeight);
   fill(153, 51, 0);
-  rect(0, 150, 20, height / 6);
+  rect(0, 150, 20, windowHeight);
   fill("orange");
-  rect(0, 200, 20, height / 6);
+  rect(0, 200, 20, windowHeight);
   fill("yellow");
-  rect(0, 250, 20, height / 6);
+  rect(0, 250, 20, windowHeight);
   fill("lime");
-  rect(0, 300, 20, height / 6);
+  rect(0, 300, 20, windowHeight);
   fill("green");
-  rect(0, 350, 20, height / 6);
+  rect(0, 350, 20, windowHeight);
   fill("aqua");
-  rect(0, 400, 20, height / 6);
+  rect(0, 400, 20, windowHeight);
   fill("blue");
-  rect(0, 450, 20, height / 6);
+  rect(0, 450, 20, windowHeight);
   fill("purple");
-  rect(0, 500, 20, height / 6);
+  rect(0, 500, 20, windowHeight);
   fill(255, 102, 255);
-  rect(0, 550, 20, height / 6);
+  rect(0, 550, 20, windowHeight);
 }
 
 function pencil() {
   if (mouseX < 100, mouseY < 100) {
     isDrawingEnabled = !isDrawingEnabled;
+    if (isLiningEnabled) {
+      !isLiningEnabled;
+    }
   }
 }
 
