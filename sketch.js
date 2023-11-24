@@ -7,7 +7,12 @@ let currentPos;
 let button;
 let isDrawingEnabled;
 let isLiningEnabled;
+let pencilSound;
 
+function preload() {
+  pencilSound = loadSound("pencil.wav");
+  pencilSound.setVolume(2);
+}
 
 //pencil button
 function tools() {
@@ -164,6 +169,7 @@ function mousePressed() {
     } 
     else if (mouseX < 100, mouseY < 100) {
       isDrawingEnabled = !isDrawingEnabled;
+      pencilSound.play();
     }
   }
 }
@@ -190,7 +196,7 @@ function keyPressed() {
   }
   if (isLiningEnabled) {
     if (key === "e") {
-      background(250)
+      background(250);
       set: previousPos.x = undefined;
       set: previousPos.y = undefined;
     }
