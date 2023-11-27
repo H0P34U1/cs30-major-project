@@ -1,5 +1,7 @@
 // Major project
 
+//couldn't do any work on the project on the day, due to stressing for a  pre-calc test
+
 let pencilColor;
 let thickness;
 let previousPos;
