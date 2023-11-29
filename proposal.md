@@ -1,6 +1,7 @@
 # Project proposal
 
-My project will be about exploring creativity, allowing the player to put their thoughts unto the screen. 
+My project will be about exploring creativity, allowing the player to put their thoughts unto the screen. I will try to implent
+an actual erasure in the art. 
 
 
 ## Needs to have a list
