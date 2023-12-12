@@ -2,6 +2,7 @@
 
 //couldn't do any work on the project on the day, due to stressing for a  pre-calc test
 
+let pencil = [];
 let pencilColor;
 let thickness;
 let previousPos;
