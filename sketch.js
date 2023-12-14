@@ -2,7 +2,7 @@
 
 //couldn't do any work on the project on the day, due to stressing for a  pre-calc test
 
-let pencil = [];
+let pencill = [];
 let pencilColor;
 let thickness;
 let previousPos;
@@ -11,10 +11,12 @@ let button;
 let isDrawingEnabled;
 let isLiningEnabled;
 let pencilSound;
+let img;
 
 function preload() {
   pencilSound = loadSound("pencil.wav");
   pencilSound.setVolume(2);
+  img = loadImage("png-transparent-pencil-eraser-big-pencil-s-angle-pencil-orange-thumbnail-removebg-preview.png");
 }
 
 //pencil button
@@ -88,6 +90,7 @@ function lining() {
 function setup() {
   createCanvas(windowWidth, windowHeight);
   background(250);
+  image(img, 100, 100, 25, 25);
 
   previousPos = createVector(0, 0);
   currentPos = createVector(0, 0);
