@@ -12,6 +12,10 @@ let isDrawingEnabled;
 let isLiningEnabled;
 let pencilSound;
 let img;
+let lines = [];
+let penColor;
+let bgColor;
+let penWidth;
 
 function preload() {
   pencilSound = loadSound("pencil.wav");
@@ -91,6 +95,15 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
   background(250);
   image(img, 100, 100, 25, 25);
+
+  let options = createDiv();
+  let optionsTitles = createDiv().parent.(options){
+    createP("Pen Color").parent
+
+  }
+  let optionsValue = createDiv().parent
+
+
 
   previousPos = createVector(0, 0);
   currentPos = createVector(0, 0);
