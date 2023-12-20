@@ -1,8 +1,6 @@
 // Major project
 
-//couldn't do any work on the project on the day, due to stressing for a  pre-calc test
-
-let pencill = [];
+let lines = [];
 let pencilColor;
 let thickness;
 let previousPos;
@@ -12,16 +10,10 @@ let isDrawingEnabled;
 let isLiningEnabled;
 let pencilSound;
 let img;
-let lines = [];
+
 let penColor;
 let bgColor;
 let penWidth;
-
-function preload() {
-  pencilSound = loadSound("pencil.wav");
-  pencilSound.setVolume(2);
-  img = loadImage("png-transparent-pencil-eraser-big-pencil-s-angle-pencil-orange-thumbnail-removebg-preview.png");
-}
 
 //pencil button
 function tools() {
@@ -72,14 +64,6 @@ function colorCode() {
   rect(0, 550, 20, windowHeight);
 }
 
-function pencil() {
-  if (mouseX < 100, mouseY < 100) {
-    isDrawingEnabled = !isDrawingEnabled;
-    if (isLiningEnabled) {
-      !isLiningEnabled;
-    }
-  }
-}
 
 function lining() {
   if (mouseY < 100, mouseX < 200) {
@@ -94,16 +78,6 @@ function lining() {
 function setup() {
   createCanvas(windowWidth, windowHeight);
   background(250);
-  image(img, 100, 100, 25, 25);
-
-  let options = createDiv();
-  let optionsTitles = createDiv().parent.(options){
-    createP("Pen Color").parent
-
-  }
-  let optionsValue = createDiv().parent
-
-
 
   previousPos = createVector(0, 0);
   currentPos = createVector(0, 0);
@@ -114,9 +88,26 @@ function setup() {
 }
 
 function draw() {
-  if (isDrawingEnabled) {
-    trail();
+
+  if (mouseIsPressed) {
+      let line = new MyLine()
+      lines.push(line)
   }
+
+  for (let line of lines) {
+    line.show()
+  }
+
+
+
+
+
+
+
+
+  // if (isDrawingEnabled) {
+  //   trail();
+  // }
 
   if (isLiningEnabled && mouseIsPressed) {
     currentPos.x = mouseX;
@@ -148,58 +139,52 @@ function draw() {
   equip();
 }
 
-function mousePressed() {
-  if (mouseX < 20) {
-    if (mouseY < 50) {
-      pencilColor = color(250, 250, 250);
-    } 
-    else if (mouseY < 100) {
-      pencilColor = color("black");
-    } 
-    else if (mouseY < 150) {
-      pencilColor = color("red");
-    } 
-    else if (mouseY < 200) {
-      pencilColor = color(153, 51, 0);
-    } 
-    else if (mouseY < 250) {
-      pencilColor = color("orange");
-    } 
-    else if (mouseY < 300) {
-      pencilColor = color("yellow");
-    } 
-    else if (mouseY < 350) {
-      pencilColor = color("lime");
-    } 
-    else if (mouseY < 400) {
-      pencilColor = color("green");
-    } 
-    else if (mouseY < 450) {
-      pencilColor = color("aqua");
-    } 
-    else if (mouseY < 500) {
-      pencilColor = color("blue");
-    } 
-    else if (mouseY < 550) {
-      pencilColor = color("purple");
-    } 
-    else if (mouseY < 600) {
-      pencilColor = color(255, 102, 255);
-    } 
-    else if (mouseX < 100, mouseY < 100) {
-      isDrawingEnabled = !isDrawingEnabled;
-      pencilSound.play();
-    }
-  }
-}
+// function mousePressed() {
+//   if (mouseX < 20) {
+//     if (mouseY < 50) {
+//       pencilColor = color(250, 250, 250);
+//     } 
+//     else if (mouseY < 100) {
+//       pencilColor = color("black");
+//     } 
+//     else if (mouseY < 150) {
+//       pencilColor = color("red");
+//     } 
+//     else if (mouseY < 200) {
+//       pencilColor = color(153, 51, 0);
+//     } 
+//     else if (mouseY < 250) {
+//       pencilColor = color("orange");
+//     } 
+//     else if (mouseY < 300) {
+//       pencilColor = color("yellow");
+//     } 
+//     else if (mouseY < 350) {
+//       pencilColor = color("lime");
+//     } 
+//     else if (mouseY < 400) {
+//       pencilColor = color("green");
+//     } 
+//     else if (mouseY < 450) {
+//       pencilColor = color("aqua");
+//     } 
+//     else if (mouseY < 500) {
+//       pencilColor = color("blue");
+//     } 
+//     else if (mouseY < 550) {
+//       pencilColor = color("purple");
+//     } 
+//     else if (mouseY < 600) {
+//       pencilColor = color(255, 102, 255);
+//     } 
+//     else if (mouseX < 100, mouseY < 100) {
+//       isDrawingEnabled = !isDrawingEnabled;
+//       pencilSound.play();
+//     }
+//   }
+// }
 
-function trail() {
-  if (mouseIsPressed) {
-    stroke(pencilColor);
-    strokeWeight(thickness);
-    line(mouseX, mouseY, pmouseX, pmouseY);
-  }
-}
+
 
 function mouseWheel(event) {
   thickness += event.delta / 100;
