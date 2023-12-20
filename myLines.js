@@ -5,4 +5,9 @@ class myLines {
     this.py = pwinMouseY;
     this.px = pwinMouseX;
   }
+  show() {
+    stroke(255);
+    line(this.px, this.py, this.x, this.y);
+
+  }
 }

@@ -90,12 +90,12 @@ function setup() {
 function draw() {
 
   if (mouseIsPressed) {
-      let line = new MyLine()
-      lines.push(line)
+    let line = new myLines();
+    lines.push(line);
   }
 
   for (let line of lines) {
-    line.show()
+    line.show();
   }
 
 
