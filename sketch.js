@@ -78,7 +78,6 @@ function lining() {
 function setup() {
   createCanvas(windowWidth, windowHeight);
   background(250);
-  image(img, 100, 100, 25, 25);
 
   previousPos = createVector(0, 0);
   currentPos = createVector(0, 0);
@@ -90,7 +89,7 @@ function setup() {
 
 function draw() {
 
-  if (mousePressed) {
+  if (mouseIsPressed) {
       let line = new MyLine()
       lines.push(line)
   }
