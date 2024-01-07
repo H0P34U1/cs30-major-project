@@ -23,7 +23,48 @@
   </head>
 
   <body>
-    <script src="sketch.js"></script>
-    <script src="myLines.js"></script>
+
+    <div class="field">
+      <canvas id = "canvas"></canvas>
+      <div class="tools">
+          <label class="title">Shapes</label>
+          <ul class="options">
+              <li class="option">
+                  <img src="rectangle.svg" alt="">
+                  <span>Rectangle</span>
+              </li>
+              <li class="option">
+                  <img src="circle.svg" alt="">
+                  <span>Circle</span>
+              </li>
+              <li class="option">
+                  <img src="triangle.svg" alt="">
+                  <span>Triangle</span>
+              </li>
+              <li class="option">
+                  <input type="checkbox" id="fill-color">
+                  <label for="fill-color">Fill color</label>
+              </li>
+          </ul>
+        <button onClick="undo_last()" type="button" class="button">Undo</button>
+        <button onClick="clear_canvas()" type="button" class="button">Clear Canvas</button>
+        <button type="button" class="button">Save As Image</button>
+
+        <label class="title">Colors</label>
+        <div onclick="change_color(this)" class="color-field" style="background: red;"></div>
+        <div onclick="change_color(this)" class="color-field" style="background: blue;"></div>
+        <div onclick="change_color(this)" class="color-field" style="background: green;"></div>
+        <div onclick="change_color(this)" class="color-field" style="background: yellow;"></div>
+
+        <input oninput="draw_color = this.value" type="color" class="color-picker">
+        <label class="title">Size</label>
+        <input type="range" min="1" max="10" class="pen-range"
+                oninput="draw_width = this.value">
+      </div>
+    </div>
+    
   </body>
+
+  <script src="sketch.js"></script>
+
 </html>
