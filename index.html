@@ -13,7 +13,7 @@
   <body>
 
     <div class="field">
-      <canvas id = "canvas"></canvas> // delteting this will delete the main canvas 
+      <canvas id = "canvas"></canvas> // deleting this will delete the main canvas 
       <div class="tools">
           <label class="title">Shapes</label>
           <ul class="options">
@@ -38,6 +38,9 @@
         <button onClick="clear_canvas()" type="button" class="button">Clear Canvas</button>
         <button type="button" class="button">Save As Image</button>
 
+        <label class="title">Eraser</label>
+        <div onclick="change_color(this)" class="color-field" style="background: white;"></div>
+
         <label class="title">Colors</label>
         <div onclick="change_color(this)" class="color-field" style="background: red;"></div>
         <div onclick="change_color(this)" class="color-field" style="background: blue;"></div>
@@ -47,6 +50,10 @@
         <input oninput="draw_color = this.value" type="color" class="color-picker">
         <label class="title">Size</label>
         <input type="range" min="1" max="10" class="pen-range"
+                oninput="draw_width = this.value">
+
+        <label class="title">Transparency</label>
+        <input type="range" min="1" max="10" class="pen-trans"
                 oninput="draw_width = this.value">
       </div>
     </div>

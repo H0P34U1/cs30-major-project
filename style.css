@@ -60,6 +60,11 @@ canvas {   /* canvas itself */
     margin: 0 10px;
 }
 
-.tools .options {
+.pen-trans {
+    align-self: center;
+}
 
+.tools .options { /* Affects the shapes column*/
+    align-self: center;
+    cursor: pointer;
 }
