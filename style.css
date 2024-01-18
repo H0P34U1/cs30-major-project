@@ -43,7 +43,7 @@ canvas {   /* canvas itself */
     border: 2px solid white;
     cursor: pointer;
     color: white;
-    background: #2794d3;
+    background: rgb(39, 148, 211);
     font-weight: bold;
     margin: 0 10px;
     border-radius: 10px;
@@ -67,9 +67,22 @@ canvas {   /* canvas itself */
 .tools .options { /* Affects the shapes column*/
     align-self: center;
     cursor: pointer;
+    border: 2px solid white;
+    background-color: rgb(31, 120, 172);
     list-style: none;
+    width: 100px;
+    color: white;
+    border-radius: 10px;
+    margin: 0 12px;
+    margin-top: 35px;
 }
 
 .tools .options .option {
     cursor: pointer;
+}
+
+.tools .title {
+    color: aliceblue;
+    align-self: center;
+    margin-left: 10px;
 }

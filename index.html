@@ -15,6 +15,7 @@
     <div class="field">
       <canvas id = "canvas"></canvas> // deleting this will delete the main canvas 
       <div class="tools">
+        <img src="lini.png" alt="">
           <label class="title">Shapes</label>
           <ul class="options">
               <li class="option">
@@ -34,12 +35,15 @@
                   <label for="fill-color">Fill color</label>
               </li>
           </ul>
+          <img src="lini.png" alt="">
         <button onClick="undo_last()" type="button" class="button">Undo</button>
         <button onClick="clear_canvas()" type="button" class="button">Clear Canvas</button>
         <button type="button" class="button">Save As Image</button>
 
+        <img src="lini.png" alt="">
         <label class="title">Eraser</label>
         <div onclick="change_color(this)" class="color-field" style="background: white;"></div>
+        <img src="lini.png" alt="">
 
         <label class="title">Colors</label>
         <div onclick="change_color(this)" class="color-field" style="background: red;"></div>
@@ -48,13 +52,16 @@
         <div onclick="change_color(this)" class="color-field" style="background: yellow;"></div>
 
         <input oninput="draw_color = this.value" type="color" class="color-picker">
+        <img src="lini.png" alt="">
         <label class="title">Size</label>
         <input type="range" min="1" max="10" class="pen-range"
                 oninput="draw_width = this.value">
+                <img src="lini.png" alt="">
 
         <label class="title">Transparency</label>
         <input type="range" min="1" max="10" class="pen-trans"
                 oninput="draw_width = this.value">
+                <img src="lini.png" alt="">
       </div>
     </div>
     
