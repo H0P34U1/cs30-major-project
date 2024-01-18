@@ -67,4 +67,9 @@ canvas {   /* canvas itself */
 .tools .options { /* Affects the shapes column*/
     align-self: center;
     cursor: pointer;
+    list-style: none;
+}
+
+.tools .options .option {
+    cursor: pointer;
 }
