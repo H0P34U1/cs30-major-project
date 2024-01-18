@@ -53,14 +53,18 @@
 
         <input oninput="draw_color = this.value" type="color" class="color-picker">
         <img src="lini.png" alt="">
-        <label class="title">Size</label>
+        <ul class="cons">
+          <li class="config">
+            <label class="title">Size</label>
         <input type="range" min="1" max="10" class="pen-range"
                 oninput="draw_width = this.value">
-                <img src="lini.png" alt="">
-
-        <label class="title">Transparency</label>
+          </li>
+          <li class="configs">
+        <label class="title">Opacity</label>
         <input type="range" min="1" max="10" class="pen-trans"
                 oninput="draw_width = this.value">
+          </li>
+        </ul>
                 <img src="lini.png" alt="">
       </div>
     </div>

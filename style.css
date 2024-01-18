@@ -86,3 +86,14 @@ canvas {   /* canvas itself */
     align-self: center;
     margin-left: 10px;
 }
+
+.tools .cons {
+    list-style: none;
+}
+
+.tools .cons .config {
+    margin-top: 15px;
+}
+.tools .cons .configs {
+    margin-top: 15px;
+}
