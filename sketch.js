@@ -3,7 +3,7 @@
 // eslint-disable-next-line no-redeclare
 const canvas = document.getElementById("canvas");
 canvas.width = window.innerWidth - 60;
-canvas.height = 400;
+canvas.height = 450;
 
 let context = canvas.getContext("2d"); 
 let start_background_color = "white";
@@ -12,6 +12,7 @@ context.fillRect(0, 0, canvas.width, canvas.height);
 
 let draw_color = "black";
 let draw_width = "2";
+let draw_opacity = "1";
 let is_drawing = false;
 
 let restore_array = [];
