@@ -1,39 +1,80 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
 
-body {  /* background */
+.body {  /* background */
     margin: 0px;
     padding: 30px;
     overflow: hidden;
-    background: #2794d3;
+    background: rgba(24, 24, 24, 0.267);
 }
 
-canvas {   /* canvas itself */
+#canvass {   /* canvas itself */
+    order: 1;
     box-shadow: -3px 2px 9px 6px rgb(5, 5, 5);
     cursor: pointer; 
-    border-radius: 10px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    height: 23vh; 
 }
 
 .tools {     /* order of all the buttons */
+    order: 0;
     display: flex;
-    justify-content: center;
+    justify-content:baseline;
     flex-direction: row;
-    margin-top: 15px;
+    margin-top: 1px;
 
 }
 
 .tools .color-field {    /* rgb color buttons */
-    height: 40px;
-    width: 40px;
-    min-height: 40px;
-    min-width: 40px;
+    height: 20px;
+    width: 20px;
+    min-height: 20px;
+    min-width: 20px;
     cursor: pointer;
     display: inline-block;
     cursor: pointer;
     box-sizing: border-box;
     border-radius: 50%;
-    border: 2px solid white;
+    border: 1px solid white;
     align-self: center;
     margin: 0 10px;
+}
+
+.tools .color-picker{
+    height: 50px;
+    width: 50px;
+    border-radius: 10%;
+    border: 1px solid white;
+}
+
+.tools .button2 {  
+    align-self: center;
+    cursor: pointer;
+    font-weight: bold;
+    margin-right: 10px;
+
+}
+
+.tools .button3 {  
+    align-self: center;
+    cursor: pointer;
+    font-weight: bold;
+    margin-right: 6px;
+    margin-top: 6px;
+
+}
+
+.tools .button4 {  
+    align-self: center;
+    cursor: pointer;
+    font-weight: bold;
+    margin-right: 8px;
+    margin-bottom: 2px;
+
 }
 
 .tools .button {           /* undo and clear buttons*/
@@ -43,7 +84,7 @@ canvas {   /* canvas itself */
     border: 2px solid white;
     cursor: pointer;
     color: white;
-    background: rgb(39, 148, 211);
+    background: rgb(0, 0, 0);
     font-weight: bold;
     margin: 0 10px;
     border-radius: 10px;
@@ -67,24 +108,58 @@ canvas {   /* canvas itself */
 .tools .options { /* Affects the shapes column*/
     align-self: center;
     cursor: pointer;
-    border: 2px solid white;
-    background-color: rgb(31, 120, 172);
+    border: 2px solid rgb(255, 255, 255);
+    background-color: rgba(31, 120, 172, 0);
     list-style: none;
     width: 100px;
-    color: white;
+    color: rgb(255, 255, 255);
     border-radius: 10px;
     margin: 0 12px;
-    margin-top: 35px;
+    margin-top: 0px;
+    margin-bottom: 10px;
 }
+
+.option1:is(:hover, .active) img{
+    filter: invert(17%) sepia(90%) saturate(3000%) brightness(100%) contrast(100%) hue-rotate(900deg);
+}
+
+.option2:is(:hover, .active) img{
+    filter: invert(17%) sepia(90%) saturate(3000%) brightness(100%) contrast(100%) hue-rotate(900deg);
+}
+
+.option3:is(:hover, .active) img{
+    filter: invert(17%) sepia(90%) saturate(3000%) brightness(100%) contrast(100%) hue-rotate(900deg);
+}
+
+.option4:is(:hover, .active) img{
+    filter: invert(17%) sepia(90%) saturate(3000%) brightness(100%) contrast(100%) hue-rotate(900deg);
+}
+
+.button4:is(:hover, .active) img{
+    filter: invert(17%) sepia(90%) saturate(3000%) brightness(100%) contrast(100%) hue-rotate(900deg);
+}
+
+.button3:is(:hover, .active) img{
+    filter: invert(17%) sepia(90%) saturate(3000%) brightness(100%) contrast(100%) hue-rotate(900deg);
+}
+
+.button2:is(:hover, .active) img{
+    filter: invert(17%) sepia(90%) saturate(3000%) brightness(100%) contrast(100%) hue-rotate(900deg);
+}
+
+.button1:is(:hover, .active) img{
+    filter: invert(17%) sepia(90%) saturate(3000%) brightness(100%) contrast(100%) hue-rotate(900deg);
+}
+
 
 .tools .options .option {
     cursor: pointer;
 }
 
 .tools .title {
-    color: aliceblue;
+    color: rgb(255, 255, 255);
     align-self: center;
-    margin-left: 10px;
+    margin-left: 1px;
 }
 
 .tools .cons {
@@ -92,8 +167,8 @@ canvas {   /* canvas itself */
 }
 
 .tools .cons .config {
-    margin-top: 15px;
+    margin-top: 0px;
 }
 .tools .cons .configs {
-    margin-top: 15px;
+    margin-top: 5px;
 }

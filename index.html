@@ -13,50 +13,57 @@
   <body>
 
     <div class="field">
-      <canvas id = "canvas"></canvas> // deleting this will delete the main canvas 
+      <canvas id = "canvass"></canvas> 
       <div class="tools">
-        <img src="lini.png" alt="">
           <label class="title">Shapes</label>
           <ul class="options">
-              <li class="option">
+              <li class="option1">
                   <img src="rectangle.svg" alt="">
                   <span>Rectangle</span>
               </li>
-              <li class="option">
+              <li class="option2">
                   <img src="circle.svg" alt="">
                   <span>Circle</span>
               </li>
-              <li class="option">
+              <li class="option3">
                   <img src="triangle.svg" alt="">
                   <span>Triangle</span>
               </li>
-              <li class="option">
+              <li class="option4">
                   <input type="checkbox" id="fill-color">
                   <label for="fill-color">Fill color</label>
               </li>
           </ul>
-          <img src="lini.png" alt="">
-        <button onClick="undo_last()" type="button" class="button">Undo</button>
         <button onClick="clear_canvas()" type="button" class="button">Clear Canvas</button>
-        <button type="button" class="button">Save As Image</button>
 
-        <img src="lini.png" alt="">
-        <label class="title">Eraser</label>
-        <div onclick="change_color(this)" class="color-field" style="background: white;"></div>
-        <img src="lini.png" alt="">
+        <div class="button4" onClick="Save_image()">
+          <img src="save.svg" alt="">
+        </div>
+        <div class="button3" onClick="undo_last()">
+          <img src="undo.svg" alt="">
+        </div>
+        <div class="button2" onclick="change_color(this)" style="background: white;">
+          <img src="eraser.svg" alt="">
+        </div>
+
+        <div class="button2" onclick="pencil()">
+          <img src="brush.svg" alt="">
+        </div>
 
         <label class="title">Colors</label>
+        <div onclick="change_color(this)" class="color-field" style="background: black;"></div>
+        <div onclick="change_color(this)" class="color-field" style="background: gray;"></div>
         <div onclick="change_color(this)" class="color-field" style="background: red;"></div>
-        <div onclick="change_color(this)" class="color-field" style="background: blue;"></div>
-        <div onclick="change_color(this)" class="color-field" style="background: green;"></div>
         <div onclick="change_color(this)" class="color-field" style="background: yellow;"></div>
+        <div onclick="change_color(this)" class="color-field" style="background: green;"></div>
+        <div onclick="change_color(this)" class="color-field" style="background: blue;"></div>
+        <div onclick="change_color(this)" class="color-field" style="background: purple;"></div>
 
         <input oninput="draw_color = this.value" type="color" class="color-picker">
-        <img src="lini.png" alt="">
         <ul class="cons">
           <li class="config">
             <label class="title">Size</label>
-        <input type="range" min="1" max="16" class="pen-range"
+        <input type="range" min="1" max="26" class="pen-range"
                 oninput="draw_width = this.value">
           </li>
           <li class="configs">
@@ -65,7 +72,6 @@
                 oninput="draw_opacity = this.value">
           </li>
         </ul>
-                <img src="lini.png" alt="">
       </div>
     </div>
     
