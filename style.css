@@ -44,6 +44,10 @@
     margin: 0 10px;
 }
 
+.tools .logo {
+    margin-left: -80px;
+}
+
 .tools .color-picker{
     height: 50px;
     width: 50px;
